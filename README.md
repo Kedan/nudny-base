@@ -1,8 +1,8 @@
-# Nudny Arg Parser
+# Nudny Project Structure
 
 This project is nudny.
 
-This module is to parse parameters send to application via consile line
+WORK IN PROGRESS
 
 ## Features
 - cmake presets
@@ -12,6 +12,9 @@ This module is to parse parameters send to application via consile line
 - valgrind
 - helgrind
 - coverage (line, branch)
+
+## Requirements
+- nlohmann/json
 
 ## Build
 ./scripts directory contains .sh files, used to build code, generate coverage raports and clean workspace.
