@@ -1,8 +1,7 @@
-# Nudny Project Structure
+# Nudny Baseline 
 
-This project is nudny.
-
-WORK IN PROGRESS
+This is baseline for future modules/application
+It is responsible for building, testing and code quality.
 
 ## Features
 - cmake presets
