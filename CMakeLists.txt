@@ -1,13 +1,21 @@
 cmake_minimum_required(VERSION 3.23)
-project(nudny VERSION 0.1.0 DESCRIPTION "nudny-base")
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS, " -Wall -Wextra -Wpedantic")
+
+
+
+set(MOD_NAME "nudny-arg-parser")
+set(MOD_DESC "application argument parser")
+set(MOD_ALIAS "nudny::arg_parser")
 
 set(TESTS_DIR "test")
 set(INC_DIR "include")
 set(SRC_DIR "src")
-set(MOD_NAME "nudny-base")
+
+
+project(${MOD_NAME} VERSION 0.1.0 DESCRIPTION ${MOD_DESC})
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS, " -Wall -Wextra -Wpedantic")
+
 
 set(SANITIZER_FLAGS, "")
 add_custom_target(coverage
@@ -24,7 +32,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 enable_testing()
 add_library(${MOD_NAME}
-	src/base.cpp
+	src/core/arg/Parser.cpp
 )
 target_include_directories(${MOD_NAME}
 	PUBLIC
@@ -55,4 +63,4 @@ if(ENABLE_SANITIZERS)
 endif()
 
 add_subdirectory(test)
-add_library(nudny::base ALIAS ${MOD_NAME})
+add_library(${MOD_ALIAS} ALIAS ${MOD_NAME})

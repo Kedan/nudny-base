@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 
 add_executable(unit_tests
-	src/nudny_base_test.cpp
+	src/nudny/core/arg/Parser_test.cpp
 )
 
 target_link_libraries(
