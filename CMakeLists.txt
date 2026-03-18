@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS, " -Wall -Wextra -Wpedantic")
 
 set(SANITIZER_FLAGS, "")
-add_custom_target(coverage
+add_custom_target(${MOD_NAME}_coverage
 	COMMAND ${CMAKE_CTEST_COMMAND} -V --preset coverage
 	COMMAND ${CMAKE_SOURCE_DIR}/scripts/gencov.sh ${CMAKE_BINARY_DIR}
 	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
